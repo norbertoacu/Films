@@ -38,7 +38,8 @@ _Tambien te recomiendo que utilices un IDE del tipo Visual Studio Code, que te f
 
 ## Ejecutando las pruebas ⚙️
 
-_Pendiente de realización_
+_Adjunto el link para poder utilizar las pruebas que hice con el PostMan_
+https://blue-moon-176129.postman.co/workspace/Pruebas~0f6c06d5-3b00-4354-a211-d18ada6765ea/collection/23357599-407bef1a-71ea-4f4b-802f-d9acc44177af?action=share&creator=23357599
 
 ### Analice las pruebas end-to-end 🔩
 
