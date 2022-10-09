@@ -13,7 +13,7 @@ Mira **Deployment** para conocer como desplegar el proyecto.
 
 ### Pre-requisitos 📋
 
-_Necesitaras tener instalado un gestor de bases de datos,tipo , XAMP,WAMP,MyWorkBench, que trabaje con MySQL._
+_Necesitaras tener instalado un gestor de bases de datos,tipo , XAMP,WAMP,MySQLWorkBench, que trabaje con MySQL._
 _Recuerda que tienes que tener bien configurado el fichero db.config.js,con el nombre de la base de datos y el usuario y la contraseña_
 _Tambien te recomiendo que utilices un IDE del tipo Visual Studio Code, que te facilitara muchas de las tareas_
 
@@ -24,8 +24,16 @@ _Tambien te recomiendo que utilices un IDE del tipo Visual Studio Code, que te f
 ### Instalación 🔧
 
 ## Comienza con la instalación de la Aplicación
+* Asegurate de terner instalado el Xamp,Wamp, MySqlWorkBench.
+* Crea una base de datos que se llame 'db_peliculas' o bien importala de la carpeta BBDD.
+* Asegurate que en el fichero db_config.js, estan puestos el usuario y la clave correctos, para conectar con tu gestor de BBDD.
+* Crear una carpeta para alojar el proyecto.
+* Abre esa carpeta en el area de trabajo del Visual Studio Code.
+* Asegurate de tener Git instalado. 
+* Abre un terminal GitBash. 
+* Git clone https://github.com/norbertoacu/Films.git 
+* `cd Films`
 * `cd frontend`
-* Git clone https://github.com/norbertoacu/Films.git
 * Ejecuta `npm install` para instalar el gestor de paquetes npm.
 * Ejecuta `ionic serve ` para iniciar el servidor del FrontEnd.
 
@@ -75,7 +83,9 @@ Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](ht
 
 ## Versionado 📌
 
-Pendiente de eleboración
+0.1a - Primera versión
+0.1b - Proximamente, espero poder corregir errores que da por consola, y poder hacer un refresco de la pantalla de listado cuando hacer una actualización/modificación 
+de alguno de los FILMs.
 
 ## Autores ✒️
 
