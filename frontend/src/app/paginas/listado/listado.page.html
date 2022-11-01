@@ -9,8 +9,12 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
+   <ion-list>
     <ion-item *ngFor="let film of peliculas">
+      <ion-avatar slot="start">
+        <img *ngIf="film.filename" src="http://localhost:8080/images/{{film.filename}}" alt="image" />
+      </ion-avatar>
+
       <ion-label>
         <h2>{{film.titulo}}</h2>
         <h3>{{film.duracion}}</h3>
@@ -26,5 +30,12 @@
       </div>
     </ion-item>
   </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <!-- <ion-fab-button clear [routerLink]="'/datos'" [routerDirection]="'root'"> esto tambien funciona-->
+     <ion-fab-button (click)="addFilm()">
+      <ion-icon name="add-outline"></ion-icon>
+      </ion-fab-button>
+  </ion-fab>
 
 </ion-content>

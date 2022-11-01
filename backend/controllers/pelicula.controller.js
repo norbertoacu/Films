@@ -16,11 +16,12 @@ exports.create = (req, res) => {
   const pelicula = {
     titulo: req.body.titulo,
     duracion: req.body.duracion,
-    formato: req.body.formato
+    formato: req.body.formato,
+    filename: req.file ? req.file.filename : ""
     //published: req.body.published ? req.body.published : false
   };
 
-  // Save Film in the database
+  // Save Film in the database with image filename
   Pelicula.create(pelicula)
     .then(data => {
       res.send(data);

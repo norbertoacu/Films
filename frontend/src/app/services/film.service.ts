@@ -6,7 +6,7 @@ export class Film {
   _id: number;
   titulo: string;
   duracion: string;
-  //username: string;
+  filename: string;
 }
 
 
@@ -21,13 +21,26 @@ export class FilmService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
 
+  
   constructor(private httpCliente: HttpClient) { }
 
-  createUser(film: Film): Observable<any> {
-    return this.httpCliente.post<Film>(this.endpoint, JSON.stringify(film), this.httpOptions)
-    // .pipe(
-    //   catchError(this.handleError<User>('Error occured'))
-    // );
+  // createUser(film: Film): Observable<any> {
+  //   return this.httpCliente.post<Film>(this.endpoint, JSON.stringify(film), this.httpOptions)
+  //   // .pipe(
+  //   //   catchError(this.handleError<User>('Error occured'))
+  //   // );
+  // }
+  
+
+
+  createFilm(film, blob){
+    let formData = new FormData();
+    formData.append("titulo", film.titulo);
+    formData.append("duracion", film.duracion);
+    // formData.append("filename", blob);
+    formData.append("file", blob);
+
+    return this.httpCliente.post(this.endpoint, formData);
   }
 
 
@@ -62,5 +75,5 @@ export class FilmService {
       return of(result as T);
     };
   }
-
+ x
 }

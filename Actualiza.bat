@@ -1,4 +1,4 @@
 echo ** Actualizar repositorio local y Subir a GIT **
-gitadd .
-git commit –m “asunto”
+git add .
+git commit –m "First Commit"
 git push origin master

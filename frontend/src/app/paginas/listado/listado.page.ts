@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FilmService } from '../../services/film.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-listado',
@@ -10,11 +11,18 @@ export class ListadoPage implements OnInit {
 
   peliculas: any = [];
 
-  constructor(private filmService: FilmService) { }
+  constructor(private filmService: FilmService,private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit() :void{
+   // this.getAllFilms();
+  }
+
+  ionViewWillEnter():void{
     this.getAllFilms();
   }
+
+
+
 
   getAllFilms() {
     this.filmService.getFilms().subscribe(response => {
@@ -25,11 +33,12 @@ export class ListadoPage implements OnInit {
 
     this.filmService.deleteFilm(id).subscribe(data => {
       this.getAllFilms();
-    })
-
+    });
+   
   }
-
-
+    addFilm(){
+    this.router.navigateByUrl("/datos");
+      }
 
 }
 

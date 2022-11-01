@@ -1,12 +1,17 @@
 module.exports = app => {
     const Peliculas = require("../controllers/pelicula.controller");
   
+    var upload = require('../multer/upload')
+    
     var router = require("express").Router();
   
 
-    // Create a new Pelicula
-    router.post("/", Peliculas.create);
+    // Create a new Pelicula -without image
+   // router.post("/", Peliculas.create);
   
+   // Create a new Pelicula with imagen
+   router.post("/",upload.single('file'), Peliculas.create);
+
     // Retrieve all Peliculas
     router.get("/", Peliculas.findAll);
   
